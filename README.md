@@ -2,7 +2,7 @@
 
 An Arduino project that reads a battery's voltage through a resistor voltage divider and lights up a color-coded LED (green/yellow/red) to show its charge state, streaming every reading to the serial monitor as CSV.
 
-Built as a personal project to get hands-on with C++ after finishing coursework in digital logic, an Arduino sketch (`.ino`) compiles as C++, with `setup()`/`loop()` standing in for `main()`.
+Built as a personal project to get hands-on with C++, an Arduino sketch (`.ino`) compiles as C++, with `setup()`/`loop()` standing in for `main()`.
 
 > **Note:** the code and the sketch's serial output uses Portuguese state names (`Verde`/`Amarelo`/`Vermelho`). This documentation is in English.
 
