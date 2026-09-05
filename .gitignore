@@ -1,0 +1,8 @@
+# Build artifacts
+build/
+*.hex
+*.elf
+
+# OS files
+.DS_Store
+Thumbs.db
