@@ -4,7 +4,7 @@ An Arduino project that reads a battery's voltage through a resistor voltage div
 
 Built as a personal project to get hands-on with C++, an Arduino sketch (`.ino`) compiles as C++, with `setup()`/`loop()` standing in for `main()`.
 
-> **Note:** the code and the sketch's serial output uses Portuguese state names (`Verde`/`Amarelo`/`Vermelho`). This documentation is in English.
+> **Note:** the code and the sketch's serial output uses Portuguese. This documentation is in English.
 
 ## How the circuit works
 
