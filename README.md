@@ -71,8 +71,7 @@ The full 47-row log is in [`data/resultado_teste.csv`](data/resultado_teste.csv)
 ├── README.md
 ├── LICENSE
 ├── .gitignore
-├── images/
-│   └── circuito_tinkercad.png
+├── circuito_tinkercad.png
 └── data/
     └── resultado_teste.csv
 ```
