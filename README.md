@@ -2,7 +2,7 @@
 
 An Arduino project that reads a battery's voltage through a resistor voltage divider and lights up a color-coded LED (green/yellow/red) to show its charge state, streaming every reading to the serial monitor as CSV.
 
-Built as a personal project to get hands-on with C++ after finishing coursework in digital logic — an Arduino sketch (`.ino`) compiles as C++, with `setup()`/`loop()` standing in for `main()`.
+Built as a personal project to get hands-on with C++ after finishing coursework in digital logic, an Arduino sketch (`.ino`) compiles as C++, with `setup()`/`loop()` standing in for `main()`.
 
 > **Note:** the sketch's serial output uses Portuguese state names (`Verde`/`Amarelo`/`Vermelho`). This documentation is in English.
 
@@ -10,9 +10,9 @@ Built as a personal project to get hands-on with C++ after finishing coursework 
 
 The circuit was designed and simulated in Tinkercad:
 
-![Circuit diagram](images/circuito_tinkercad.png)
+<img width="1185" height="420" alt="circuito_tinkercad" src="https://github.com/user-attachments/assets/31366af9-e97e-41fe-b635-7ab09a10a719" />
 
-The power source in this project can reach up to 15 V — well above the 5 V an Arduino analog pin can safely read. A voltage divider made of two resistors in series (R1 = 20 kΩ, R2 = 10 kΩ) solves that: the midpoint between them connects to pin `A0`, and the voltage there is always `Vsource × R2 / (R1 + R2)`, which for these values works out to `Vsource / 3`. At the maximum 15 V, `A0` sees exactly 5 V — right at the Arduino's limit, never past it.
+The power source in this project can reach up to 15 V, well above the 5 V an Arduino analog pin can safely read. A voltage divider made of two resistors in series (R1 = 20 kΩ, R2 = 10 kΩ) solves that: the midpoint between them connects to pin `A0`, and the voltage there is always `Vsource × R2 / (R1 + R2)`, which for these values works out to `Vsource / 3`. At the maximum 15 V, `A0` sees exactly 5 V — right at the Arduino's limit, never past it.
 
 **Components used:**
 - 1× Arduino Uno
@@ -35,9 +35,9 @@ That reconstructed voltage is then compared against two thresholds to decide whi
 
 | Voltage range | LED |
 |---|---|
-| ≥ 13.9 V | 🟢 Green |
-| 12.2 V – 13.9 V | 🟡 Yellow |
-| < 12.2 V | 🔴 Red |
+| ≥ 13.9 V | Green |
+| 12.2 V – 13.9 V | Yellow |
+| < 12.2 V | Red |
 
 On every loop, the sketch also prints the elapsed time, the computed voltage, and the current state over serial (`millis()/1000.0`, `tensaoFonte`, `estado`, comma-separated), so a run can be logged and reviewed afterward.
 
@@ -54,7 +54,7 @@ The circuit was tested by letting the source voltage fall from 15 V to 0 V and l
 | 13.56 | 11.91 | Vermelho (red) | Crosses below 12.2 V |
 | 23.10 | 0.00 | Vermelho (red) | Test end — source depleted |
 
-The full 47-row log is in [`data/resultado_teste.csv`](data/resultado_teste.csv). It's semicolon-separated with comma decimals (`;` / `,`) — the format Excel produces by default under Brazilian regional settings when the raw serial output is opened there; the sketch itself prints plain comma-separated values.
+The full 47-row log is in [`data/resultado_teste.csv`](data/resultado_teste.csv). It's semicolon-separated with comma decimals (`;` / `,`), the format Excel produces by default under Brazilian regional settings when the raw serial output is opened there; the sketch itself prints plain comma-separated values.
 
 ## Getting started
 
@@ -85,7 +85,7 @@ The full 47-row log is in [`data/resultado_teste.csv`](data/resultado_teste.csv)
 
 ## Author
 
-Pedro Rangel — Electronic and Computer Engineering student at UFRJ
+Pedro Rangel — Electronics and Computer Engineering student at UFRJ
 
 ## License
 
