@@ -12,7 +12,7 @@ The circuit was designed and simulated in Tinkercad:
 
 <img width="1185" height="420" alt="circuito_tinkercad" src="https://github.com/user-attachments/assets/31366af9-e97e-41fe-b635-7ab09a10a719" />
 
-The power source in this project can reach up to 15 V, well above the 5 V an Arduino analog pin can safely read. A voltage divider made of two resistors in series (R1 = 20 kΩ, R2 = 10 kΩ) solves that: the midpoint between them connects to pin `A0`, and the voltage there is always `Vsource × R2 / (R1 + R2)`, which for these values works out to `Vsource / 3`. At the maximum 15 V, `A0` sees exactly 5 V — right at the Arduino's limit, never past it.
+The power source in this project can reach up to 15 V, well above the 5 V an Arduino analog pin can safely read. A voltage divider made of two resistors in series (R1 = 20 kΩ, R2 = 10 kΩ) solves that: the midpoint between them connects to pin `A0`, and the voltage there is always `Vsource × R2 / (R1 + R2)`, which for these values works out to `Vsource / 3`. At the maximum 15 V, `A0` sees exactly 5 V, right at the Arduino's limit, never past it.
 
 **Components used:**
 - 1× Arduino Uno
